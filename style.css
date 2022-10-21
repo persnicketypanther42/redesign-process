@@ -1,0 +1,78 @@
+/* Following code based on live-code Bootstrap demo */
+
+body {
+    background-color: #ffc1db;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  h4 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 16px;
+  }
+
+  h6 { 
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 14px;
+  }
+
+  .tablet, .phone {
+    height: 40rem;
+    object-fit: scale-down;
+  }
+
+  .desktop { 
+   height: 70vh;
+   width: 100%;
+   object-fit: scale-down;
+  }
+
+  #style-guide-img {
+    width: 70vh;
+    height: 100%;
+    object-fit: scale-down;
+  }
+  
+  .d-flex > .card {
+    margin: 1rem;
+    width: 80%;
+  }
+  
+  .d-flex > .card > img {
+    width: 100px;
+    height: 100%;
+    object-fit: scale-down;
+    margin: 1rem;
+  }
+
+  .d-flex > .card > img {
+    width: 70vw;
+    height: 100%;
+    object-fit: scale-down;
+    margin: 1rem;
+  }
+  
+  .d-flex > .card > .card-body{
+    width: 100%;
+    background-color: #ebebeb
+
+  }
+  
+  .d-flex > .card > .card-subtitle {
+    margin-top: 25px
+  }
+  
+  .d-flex > .card > .card-body > .card-text{
+    margin-bottom: 2rem;
+  }
+  
+  .d-flex > .card > .card-body > .card-subtitle{
+    text-align: center;
+  }
+  
+  ol, ul {
+    margin-bottom: 2rem;
+  }
+  

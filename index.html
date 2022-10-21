@@ -1,0 +1,137 @@
+<!-- Following code based on live-code Bootstrap demo-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Redesign</title>
+    <!-- import CSS styles -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" /> 
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="bootstrap/boostrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!-- page content goes into <body> -->
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand">Responsive Redesign</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class = "navbar-item"><a class="nav-link" href="#motivation">Motivation</a></li>
+            <li class = "navbar-item"><a class="nav-link" href="#usability">Usability Problems</a></li>
+            <li class = "navbar-item"><a class="nav-link" href="#low-fi">Low-Fidelity Wireframing</a></li>
+            <li class = "navbar-item"><a class="nav-link" href="#style-guide">Visual Design Style Guide</a></li>
+            <li class = "navbar-item"><a class="nav-link" href="#high-fi">High-Fidelity Prototyping</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="d-flex flex-column justify-content-space-around align-items-center">
+      <div class="card" id="motivation">
+        <div class="card-body">
+            <h5 class="card-title">Motivation</h5>
+                <p class="card-text">With the web as one of the major frontiers and resources of our day, promoting accessibility
+            and ease of navigation is key. In order to gain practice in so-called responsive web development, I redesigned
+            the news section of YCombinator's website, <a href="https://news.ycombinator.com/">Hacker News</a>. 
+            I chose to redesign YCombinator’s Hacker News section in particular because it was interesting to me that a site that is by and for software developers–people whose job is to design simple, intuitive systems–fails to follow so many integral design principles.
+            My redesigned site can be found <a href="https://persnicketypanther42.github.io/redesign-product">here</a>.
+            Below, I detail the development process that allowed me to transform a website with poor usability and accessibility
+            into a site that is more user-friendly (for all user!) and responsive.</p>
+                </p>
+            </div>
+        </div>
+      <div class="card" id="usability">
+        <div class="card-body">
+          <h5 class="card-title">Usability Problems</h5>
+          <p class="card-text">I began this project by making detailed note of the usability and accessibility problems
+            I saw with Hacker News, listed here:</p>
+            <ol>
+                <li>Small text (usability, accessibility)</li>
+                <li>Low-contrast text (usability, accessibility)</li>
+                <li>Unintuitivefunctionality and system status for upvotes (learnability)</li>
+                <li>Unvote functionality is difficult to employ after vote functionality, as it appears in a different location (learnability)</li>
+                <li>Inconsistent language between number of comments and “discuss,” which appears when there are zero comments (learnability)</li>
+                <li>Clicking on the time posted directs to the discussion, which is not intuitive (learnability)</li>
+                <li>Search is located at the bottom of the page (learnability, usability)</li>
+                <li>Clicking the link to the right of a story title directs one to search for other articles from that source rather than directing to the story itself (learnability)</li>
+                <li>No ability to unhide hidden articles (usability)</li>
+                <li>Not obvious that many links are, in fact, links (learnability)</li>
+                <li>“More” (bottom of page) isn’t very clearly a link (usability, accessibility)</li>
+                <li>No clear way to navigate back to the previous page of posts (usability, accessibility)</li>
+                <li>Lack of label on search form (accessibility)</li>
+                <li>Lack of margin or another visual separator to discriminate between posts (usability)</li>
+                </ol>
+
+            <p>After noting these problems, I also employed <a href="https://wave.webaim.org/">WAVE</a> to identify more acessibility issues.
+            WAVE identified the same issues that I did, as well as a few additional ones. Some detected accessibility issues were not visible to the naked eye, such as having many empty links (could be bothersome for people using screen readers), images without alt text, use of layout tables (often don’t work w screen readers), lack of heading structure (no clear hierarchy for assistive tech users); this shows the disparity of web accessibility between people with disabilities and people who don’t.
+            WAVE did note that the site's HTML had the language attribute set to English, which is a good start, as it helps those who use screen readers.
+        </div>
+      </div>
+      <div class="card" id="low-fi">
+        <div class="card-body">
+          <h5 class="card-title">Low-Fidelity Wireframing</h5>
+          <p class="card-text">The next step was to create low-fidelity wireframes in Balsamiq with the intent of addressing the various usability issues identified. These are presented below for the following sizes: phone, tablet, and desktop. Wireframes are annotated with magenta callouts, which correspond to this list of fixes to usability issues:</p>
+          </p>
+          <ol>
+            <li>Made top-level navigation collapse into a “hamburger”-style menu on smaller screens, making the UI more responsive (rather than clunky text wrapping)</li>
+            <li>Added a search bar at the top of the page, making it easier to find articles on specific topics</li>
+            <li>Added visual separation between menu/search and posts to differentiate functionality and make reading the site easier on the eyes</li>
+            <li>Changed article titles to better demonstrate they are hyperlinks</li>
+            <li>Changed display for upvote and comment buttons to make them analogous to other well-known UIs (YouTube, FaceBook, Instagram) and better reflect the state (has a user liked? Have they commented? Has anyone commented?</li>
+            <li>Increased whitespace between post title/author and other post details, made all of these clearly links, and more clearly described functionality</li>
+            <li>Kept a search bar at the bottom of the page as well but moved it up from the footer and made page navigation clearer than “More,” which was not even clearly a link.</li>
+            <li>On the mobile phone, removed links in footer that were irrelevant to the news portion of the site in order to fit it better and added “More” option to keep that information accessible, kept footer on other sizes the same. The prediction is that mobile users aren’t very interested in filling out applications or reading up on legal information, uses of the site that are more likely to occur on larger screens.</li>
+            </ol>
+          <h6 class="card-subtitle mb-2 text-muted">Phone Wireframes</h6>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <img class="phone" src="wireframes/phone/phone.png" alt="phone wireframe">
+        </div>
+          <h6 class="card-subtitle mb-2 text-muted">Tablet Wireframe</h6>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <img class="tablet" src="wireframes/tablet/tablet.png"></div>
+          <h6 class="card-subtitle mb-2 text-muted">Desktop Wireframes</h6>
+            <div class="d-flex flex-row justify-content-center align-items-center">
+                <img class="desktop" src="wireframes/desktop/desktop.png"></div>
+        </div>
+      </div>
+      <div class="card" id="style-guide">
+        <div class="card-body">
+          <h5 class="card-title">Visual Design Style Guide</h5>
+          <p class="card-text">Before moving on from creating wireframes to high-fidelity prototypes, I created a style guide in Figma to enforce consistent conventions across prototypes.</p>
+          </p>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <img id="style-guide-img" src="style-guide/style-guide.png"></div>
+        </div>
+      </div>
+      <div class="card" id="storyboarding">
+        <div class="card-body">
+          <h5 class="card-title">High-Fidelity Prototyping</h5>
+          <p class="card-text">Lastly, I developed high-fidelity prototypes for phone, tablet, and desktop screen sizes (below). The desktop prototype is annotated with information regarding the CSS and HTML needed to produce the prototypes such that they are responsive.
+            A large portion of the HTML/CSS for this project can be made simpler using Bootstrap, a library that provides pre-built HTML/CSS elements, javascript plugins, and more. I used Bootstrap for a majority, but not all, of this project.
+          </p>
+          <h6 class="card-subtitle mb-2 text-muted">Phone Prototype</h6>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <img class="phone" src="prototypes/phone/phone.png"></div>
+          <h6 class="card-subtitle mb-2 text-muted">Tablet Prototype</h6>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <img class="tablet" src="prototypes/tablet/tablet.png"></div>
+          <h6 class="card-subtitle mb-2 text-muted">Desktop Prototype</h6>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <img class="desktop" src="prototypes/desktop/desktop.png"></div>
+        </div>
+      </div>
+      
+      <div class="card" id="conclusions">
+        <div class="card-body">
+          <h5 class="card-title">Conclusions</h5>
+          <p class="card-text">
+            Though there are some small differences between my final layout and my wireframes/prototypes, overall this project was a success. I was able to identify and address the usability issues that I had identified, and I was able to create a responsive layout that is easy to use and looks good on all screen sizes.
+            Moreover, it gave me an appreciation of the effort that goes into designing a site that is truly responsive.
+          </p>
+        </div>
+      </div>     
+    </div>
+  </body>
+</html>
